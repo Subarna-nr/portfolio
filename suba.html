@@ -1,0 +1,203 @@
+a<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+        section {
+            padding: 80px 20px;
+            margin-top: 60px; /* space for fixed nav */
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .skills, .certifications, .interests, .hobbies {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .skills div, .certifications div, .hobbies div {
+            background: #eee;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1 1 200px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .skills div:hover, .certifications div:hover, .hobbies div:hover {
+            background: #ddd;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        @media (max-width: 600px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+    </ul>
+</nav>
+
+<!-- Header Section -->
+<header id="home">
+    <img src=".jpg" alt="Subarna">
+    <h1>Subarna N R</h1>
+    <p>Data Science and Analytics Student</p>
+    <p>Email: <a href="mailto:subarnaramesh362@gmail.com">subarnaramesh362@gmail.com</a></p>
+    <p>Mobile: 8189938147</p>
+</header>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div onclick="showSkillDescription('Communication')">Communication</div>
+        <div onclick="showSkillDescription('Adaptability')">Adaptability</div>
+        <div onclick="showSkillDescription('Problem Solving')">Problem Solving</div>
+        <div onclick="showSkillDescription('Time Management')">Time Management</div>
+    </div>
+    <div id="skill-description" style="margin-top: 20px; text-align: center;"></div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications">
+        <div><a href="https://online.flippingbook.com/view/171534254/.pdf" target="_blank">Basics Of Python</a></div>
+        <div><a href="https://online.flippingbook.com/view/171259066/.pdf" target="_blank">Agile Methodology</a></div>
+        <div><a href="https://online.flippingbook.com/view/171653945/.pdf" target="_blank">OOPS in Python</a></div>
+        <div><a href="https://online.flippingbook.com/view/171153681/.pdf" target="_blank">Distribute Power BI Insights</a></div>
+        <div><a href="https://online.flippingbook.com/view/170994109/.pdf" target="_blank">Create and Use Analytics Reports with Power BI</a></div>
+
+    </div>
+</section>
+
+<!-- Interests Section -->
+<section id="interests">
+    <h2>Interests</h2>
+    <p>I have a keen interest in data science and analytics, focusing on leveraging machine learning and AI to drive insights and solutions. My analytical mindset and attention to detail motivate me to tackle complex problems and explore innovative technologies. I also enjoy honing my programming skills, particularly in Python, to develop efficient algorithms and contribute to impactful projects.
+</section>
+
+<!-- Hobbies Section -->
+<section id="hobbies">
+    <h2>Hobbies</h2>
+    <div class="hobbies">
+        <div onclick="showHobbyDescription('Art and Craft')">Art And Craft</div>
+        <div onclick="showHobbyDescription('Doodling')">Doodling</div>
+        <div onclick="showHobbyDescription('Listening Music')">Listening Music</div>
+        <div onclick="showHobbyDescription('Home Organizing')">Home Organizing</div>
+    </div>
+    <div id="hobby-description" style="margin-top: 20px; text-align: center;"></div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Subarna. All Rights Reserved.</p>
+    <p><a href="https://github.com/yourprofile" target="_blank" style="color:white;">GitHub</a> | <a href="https://www.linkedin.com/in/subarna-ramesh-20636128b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color:white;">LinkedIn</a></p>
+</footer>
+
+<script>
+    // Function to show skill descriptions
+    function showSkillDescription(skill) {
+        const descriptions = {
+            Communication: "Ability to express ideas clearly and effectively in spoken language.",
+            Adaptability: "Willingness to learn new skills and adjust to changing circumstances or environments.",
+            Problem_Solving: "Ability to analyze situations, identify problems, and develop solutions.",
+            Time_Management: "Prioritizing tasks and managing time effectively to meet deadlines."
+        };
+
+        document.getElementById('skill-description').innerText = descriptions[skill] || "Skill description not available.";
+    }
+
+    // Function to show hobby descriptions
+    function showHobbyDescription(hobby) {
+        const hobbyDescriptions = {
+            'Art and Craft': "Engaging in arts and crafts allows me to explore my creativity through handmade projects.",
+            'Doodling': "Doodling helps me relax and boosts my focus, letting my imagination flow freely.",
+            'Listening Music': "Listening to music enriches my day and inspires creativity, providing a mental escape.",
+            'Home Organizing': "Home organizing gives me a sense of satisfaction and clarity, creating a peaceful environment."
+        };
+
+        document.getElementById('hobby-description').innerText = hobbyDescriptions[hobby] || "Hobby description not available.";
+    }
+</script>
+
+</body>
+</html>
